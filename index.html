@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+<body>
+    <main class="main">
+        <header class="main__cabecalho">
+            <ul class="main__avatar">
+                <li>
+                    <img class="cabecalho__imagem" src="./assets/perfil.png" alt="Foto do perfil de Tiago Povoa">
+                </li>
+                <li class="cabecalho__wrapper-menu">
+                    <ul class="cabecalho__menu">
+                        <li class="cabecalho__menu__item">
+                            <a class="cabecalho__link" href="https://wa.me/55619999999" target=""_blank>
+                                <img class="cabecalho__midia" src="./assets/whatsapp.svg" alt="Link WhatssApp"> WhatssApp
+                            </a>
+                        </li>
+                        <li class="cabecalho__menu__item is-one-row">
+                            <a class="cabecalho__link" href="https://github.com/tpovoa90/Desafio-Alura-ONE---Turma-6---2024.git" target=""_blank>
+                                <img class="cabecalho__midia" src="./assets/github.svg" alt="Link GitHub"> GitHub
+                            </a>
+                        </li>
+                        <li class="cabecalho__menu__item">
+                            <a class="cabecalho__link" href="https://www.linkedin.com/in/tpovoa90" target=""_blank>
+                                <img class="cabecalho__midia" src="./assets/linkedin.svg" alt="Link LinkedIn"> LinkedIn
+                            </a>    
+                        </li>        
+                    </ul>            
+                </li>
+            </ul>
+            <h1 class="cabecalho__titulo">DECODIFICADOR DE TEXTO - ALURA TURMA 6 - 2024</h1>
+        </header>
+        <div class="main__content">
+            <div class="alerta">
+                <img class="is-icon-alerta is-icon-preto" src="./assets/aviso.svg" alt="Imagem aviso"> 
+                <p>Apenas letras minúsculas e sem acento!!!</p>
+            </div>
+            <div class=" main__wrapper__area__texto">
+                <textarea class="main__area__texto js-textarea" placeholder="Digite seu texto secreto."></textarea>
+            </div>
+            <div class="main__wrapper-button">
+                <button class="is-button-large is-encrypt js-encrypt" type="button">
+                    <img class="is-icon-black" src="./assets/criptografar.svg" alt="Botao cadeado fechado">Criptografar
+                </button>
+                <button class="is-button-large is-descrypt js-descrypt" type="button">
+                    <img src="./assets/descriptografar.svg" alt="Botao cadeado aberto">Descriptografar
+                </button>
+            </div>
+        </div>
+    </main>
+    <aside class="aside">
+        <header class="aside_header">
+            <a class="is-btn-small" href="https://www.alura.com.br" target="_blank">
+                <img class="is-icon-svg is-icon-alura is-icon-blue" src="./assets/alura.svg" alt="icone logo alura">
+            </a>
+        </header>    
+        <section class="aside_display">
+            <div class="aside-display-text js-display-text">
+                <div class="imagem__aside">
+                    <img src="./assets/image-inspetor.png" alt="Imagem Inspetor Bungiganga">
+                </div>
+                <div class="mensagem__aside">
+                    <h2 class="titulo__aside"> NENHUMA MENSAGEM ENCONTRADA </h2>
+                    <p class="paragrafo__aside">Digite um texto para criptografar ou descriptografar.</p>
+                </div>
+            </div>
+            <button class="is-button-copy is-button-large js-btn-copy" type="button">Copiar!
+                <img src="./assets/clipboard.svg" alt="Imagem prancheta">
+            </button>
+        </section>
+    </aside>
+    <script src="./app.js"></script>
+</body>
+</html>
