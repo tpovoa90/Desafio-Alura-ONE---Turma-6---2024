@@ -11,6 +11,9 @@
     --fonte-botao: 'Montserrat', sans-serif;
     --body-background-color: #9e9b9b;
     --menu-background-color: #F6F6F6;
+    --image-shadow: linear-gradient(180deg, rgba(217, 217, 217, 0) 27.36%, #FFFFFF 100%);
+    --alerta-color: #6b6767;
+    --scroolbar-track-color: #6b6767;
 
     --button-criptografar-color: #790db3;
     --button-criptografar-borda: #000000;
@@ -22,9 +25,11 @@
 
     --boder-color: #8A2BE2;
     --box-shadow: 0px 0px 5px rgba(106,115,255,0.5);
+    --border-display-hover: #c36ff3;
     --box-hover: #963cca;
     --link-color: #000000;
     --area-texto-color: #340b5b;
+    --copy-background-color: #0cfdbd;
 
     
     font-size: 65%;
@@ -89,7 +94,7 @@ body {
     }
 }
 
-.cabecalho-_wrapper-menu::before{
+.cabecalho-_wrapper-menu::before {
     content: "";
     width: 1.9rem;
     height: 1.9rem;
@@ -130,7 +135,7 @@ body {
     
 }
 
-.cabecalho__link:hover{
+.cabecalho__link:hover {
     background-color: var(--box-hover);
 }
 
@@ -143,24 +148,12 @@ body {
     border-top: 0.1rem solid var(--boder-color);
     border-bottom: 0.1rem solid var(--boder-color);
 }
-.cabecalho__titulo{
+.cabecalho__titulo {
     font-size: 1.8rem;
-        
-}
-:where(botao__cabecalho) {
-    box-shadow: var(--box-shadow);
-    
-    border: .2rem solid var(--boder-color);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    display: grid;
-    place-content: center;
-    cursor: pointer;
-} 
-
-.botao__cabecalho:hover {
-    background-color: var(--box-hover);
-    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+            
 }
 
 /* Estilos do Main */
@@ -180,7 +173,7 @@ body {
 .main__wrapper__area__texto {
     height: 19rem;
     border-radius: 1rem;
-    border: 0.2rem solid var(--boder-color);
+    border: 0.4rem solid var(--boder-color);
     box-shadow: var(--box-shadow);
     background-color: var(--menu-background-color);
     padding: 1.6rem;
@@ -192,7 +185,7 @@ body {
     outline: auto;
 }
 
-.main__area__texto{
+.main__area__texto {
     resize: none;
     width: 100%;
     height: 95%;
@@ -249,11 +242,114 @@ body {
     color: var(--button-descriptografar-fonte);
 }
 
+/* Estilos Aside */
 .aside{
     display: flex;
     flex-direction: column;
 }
 
 .is-icon-alura{
-    padding: 1.0rem;
+    padding: 1.0rem 2rem;
+}
+.aside__display{
+    margin-top: 1rem;
+    border-radius: 1.4rem;
+    border: 0.4rem solid var(--boder-color);
+    background-color: var(--menu-background-color);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding-top: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.aside__display:hover{
+    border-color: var(--border-display-hover);
+}
+
+.aside__display__text{
+    font-size: 1.9rem;
+    height: 39rem;
+    overflow-x: hidden;
+    width: 100%;
+}
+.imagem__aside{
+    position: relative;
+    width: fit-content;
+    display: inline;
+}
+.imagem__aside::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--image-shadow);
+}
+.mensagem__aside{
+    padding: 0rem 5%;
+}
+.titulo__aside{
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--body-background-color);
+}
+.paragrafo__aside{
+    font-size: 1.4rem;
+    color: var(--alerta-color);
+    }
+.aside__copy{
+    width: 100%;
+}
+.is-button-copy{
+    border: none;
+    border-radius: 1rem 1rem 0.6rem 0.6rem;
+}
+.is-button-copy:hover{
+    background-color:var(--copy-background-color);
+}
+.main__area__texto::-webkit-scrollbar,
+.aside__display__text::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.main__area__texto::-webkit-scrollbar-track,
+.aside__display__text::-webkit-scrollbar-track {
+    background: var(--scroolbar-track-color);
+    border-radius: 0.5rem;
+}
+.main__area__texto::-webkit-scrollbar-thumb,
+.aside__display__text::-webkit-scrollbar-thumb {
+    background: var(--boder-color);
+    border-radius: 0.5rem;
+    border: 3px solid var(--scroolbar-track-color)
+ 
+}
+@media screen and (min-width:1020px) {
+    body{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        gap:3.6rem;
+    }
+    .cabecalho__midia{
+       width: 5rem; 
+    }
+    .cabecalho__titulo{
+        font-size: 2.8rem;
+    }
+    .is-btn-small{
+     padding: 0.1rem;   
+    }
+    .alerta{
+        display: flex;
+        justify-content: center;
+    }
+    .aside{
+        width: 34rem;
+    }
 }
