@@ -20,8 +20,6 @@
     --button-criptrografar-hover: #af3fec;
     --button-descriptrografar-hover: #e0bb6b;
 
-
-
     --boder-color: #8A2BE2;
     --box-shadow: 0px 0px 5px rgba(106,115,255,0.5);
     --box-hover: #963cca;
@@ -251,6 +249,11 @@ body {
     color: var(--button-descriptografar-fonte);
 }
 
-.is-icon-black{
-    filter: var(--button-criptografar-borda);
+.aside{
+    display: flex;
+    flex-direction: column;
+}
+
+.is-icon-alura{
+    padding: 1.0rem;
 }
