@@ -275,6 +275,11 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+.is-show-text {
+    text-align: left;
+    padding: 0rem 2rem;
+    white-space: pre-wrap;
+}
 .imagem__aside{
     position: relative;
     width: fit-content;
