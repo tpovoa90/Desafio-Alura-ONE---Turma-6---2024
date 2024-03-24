@@ -8,7 +8,6 @@ const image = document.querySelector(".imagem__aside").cloneNode(true);
 const message = document.querySelector(".mensagem__aside").cloneNode(true);
 
 textArea.focus();
-initTheme();
 
 function pasteElement(){
     display.textContent="";
